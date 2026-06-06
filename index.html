@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lautbox Malaysia — Fresh Seafood From Sea To You</title>
+  <meta name="description" content="Lautbox Malaysia delivers fresh frozen & live seafood from sea to you. Order premium fish, prawns, crab, lobster and more via WhatsApp." />
+
+  <meta property="og:title" content="Lautbox Malaysia — Fresh Seafood From Sea To You" />
+  <meta property="og:description" content="Premium frozen & live seafood delivered across Malaysia. Order via WhatsApp." />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+
+  <!-- Google Font: Outfit (geometric sans for the flat system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER (static across routes) ============ -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="#/" data-link aria-label="Lautbox Malaysia home">
+        <img class="brand__logo" src="assets/images/logo.jpg" alt="" width="40" height="40" />
+        <span class="brand__name">Lautbox <span>Malaysia</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Primary">
+        <a href="#/" data-link>Home</a>
+        <a href="#/shop" data-link>Shop</a>
+        <a href="#/merchants" data-link>Merchants</a>
+        <a href="#/about" data-link>About</a>
+        <a href="#/contact" data-link>Contact</a>
+        <a class="btn btn--primary btn--sm" id="navWhatsApp" href="#" data-wa-general>Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ ROUTED CONTENT ============ -->
+  <main id="main">
+    <div id="app" class="route-view"><!-- views injected by js/app.js --></div>
+  </main>
+
+  <!-- ============ FOOTER (static across routes) ============ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="assets/images/logo.jpg" alt="" width="56" height="56" />
+        <div>
+          <p class="site-footer__name">Lautbox Malaysia</p>
+          <p class="site-footer__tag">Fresh Seafood From Sea To You</p>
+        </div>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#/" data-link>Home</a>
+        <a href="#/shop" data-link>Shop</a>
+        <a href="#/merchants" data-link>Merchants</a>
+        <a href="#/about" data-link>About</a>
+        <a href="#/contact" data-link>Contact</a>
+      </nav>
+
+      <div class="site-footer__contact">
+        <a id="footerWhatsApp" href="#" data-wa-general class="site-footer__wa">Order on WhatsApp</a>
+        <p>Mon – Sun · 9am – 9pm</p>
+        <p>Serving all of Malaysia 🇲🇾</p>
+      </div>
+    </div>
+    <div class="site-footer__bar">
+      <div class="container">
+        <p>© <span id="year"></span> Lautbox Malaysia. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
