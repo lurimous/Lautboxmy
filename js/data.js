@@ -13,7 +13,7 @@ const SITE = {
   name: "Lautbox Malaysia",
   tagline: "Fresh Seafood From Sea To You",
   logo: "assets/images/logo.jpg",
-  hours: "Mon – Sun · 9am – 9pm",
+  hours: "Open daily, 9am to 9pm",
   social: {
     instagram: "#",
     facebook: "#",
@@ -32,9 +32,9 @@ const CATEGORIES = {
 const PRODUCTS = [
   /* ---------- Frozen ---------- */
   { name: "Dory Fish Fillet",         category: "frozen", image: "Dory Fish Fillet.jpg",         variants: ["1kg±/pkt", "2.5kg/pkt"] },
-  { name: "Coral Grouper",            category: "frozen", image: "Coral Grouper.jpg",            variants: ["600–800g", "800–1000g", "1000–1200g"] },
-  { name: "Chinese Pomfret",          category: "frozen", image: "Chinese Pomfret.jpg",          variants: ["600–800g"] },
-  { name: "Octopus",                  category: "frozen", image: "Octopus.jpg",                  variants: ["300–500g"] },
+  { name: "Coral Grouper",            category: "frozen", image: "Coral Grouper.jpg",            variants: ["600-800g", "800-1000g", "1000-1200g"] },
+  { name: "Chinese Pomfret",          category: "frozen", image: "Chinese Pomfret.jpg",          variants: ["600-800g"] },
+  { name: "Octopus",                  category: "frozen", image: "Octopus.jpg",                  variants: ["300-500g"] },
   { name: "Sabah Wild Tiger Prawn",   category: "frozen", image: "Sabah Wild Tiger Prawn.jpg",   variants: ["6/8", "8/10", "10/12"] },
   { name: "Clam",                     category: "frozen", image: "Clam.jpg",                     variants: ["500g/pkt"] },
   { name: "Frozen Tuna Saku",         category: "frozen", image: "Frozen Tuna Saku.jpg",         variants: [] },
@@ -54,12 +54,13 @@ const PRODUCTS = [
 ];
 
 /* ---------- Dummy partner stockists / pickup points ----------
-   Placeholder data — swap names/areas for real outlets later.   */
+   Placeholder data; swap names/areas for real outlets later.
+   noteKey maps to i18n merchants.notes.* for translation.        */
 const MERCHANTS = [
-  { name: "Lautbox @ Mont Kiara",   area: "Mont Kiara",   state: "Kuala Lumpur", note: "Flagship pickup point",     hours: "9am – 9pm" },
-  { name: "Lautbox SS15",           area: "Subang Jaya",  state: "Selangor",     note: "Partner stockist",          hours: "10am – 8pm" },
-  { name: "Lautbox Gurney",         area: "George Town",  state: "Penang",       note: "Partner stockist",          hours: "9am – 7pm" },
-  { name: "Lautbox Austin",         area: "Johor Bahru",  state: "Johor",        note: "Pickup & cold chain hub",   hours: "9am – 9pm" },
-  { name: "Lautbox KK Central",     area: "Kota Kinabalu",state: "Sabah",        note: "Source & dispatch point",   hours: "8am – 6pm" },
-  { name: "Lautbox Riverside",      area: "Kuching",      state: "Sarawak",      note: "Partner stockist",          hours: "9am – 8pm" },
+  { name: "Lautbox @ Mont Kiara",   area: "Mont Kiara",    state: "Kuala Lumpur", noteKey: "flagship", hours: "9am to 9pm" },
+  { name: "Lautbox SS15",           area: "Subang Jaya",   state: "Selangor",     noteKey: "partner",  hours: "10am to 8pm" },
+  { name: "Lautbox Gurney",         area: "George Town",   state: "Penang",       noteKey: "partner",  hours: "9am to 7pm" },
+  { name: "Lautbox Austin",         area: "Johor Bahru",   state: "Johor",        noteKey: "hub",      hours: "9am to 9pm" },
+  { name: "Lautbox KK Central",     area: "Kota Kinabalu", state: "Sabah",        noteKey: "source",   hours: "8am to 6pm" },
+  { name: "Lautbox Riverside",      area: "Kuching",       state: "Sarawak",      noteKey: "partner",  hours: "9am to 8pm" },
 ];

@@ -50,7 +50,9 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--fg);
-  background: var(--bg);
+  /* Navy backdrop so route transitions (fade + translate) blend into the
+     navy hero/footer instead of flashing the white base behind #app. */
+  background: var(--navy);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -182,6 +184,34 @@ p { margin: 0; }
 .site-nav > a[data-link]:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
 .site-nav > a[data-link].is-active { color: #fff; background: var(--primary); }
 
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+
+/* Language switcher */
+.lang-switch {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-btn {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.4rem 0.6rem;
+  min-width: 38px;
+  min-height: 34px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.lang-btn:hover { color: #fff; }
+.lang-btn[aria-pressed="true"] { background: var(--primary); color: #fff; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -194,6 +224,11 @@ p { margin: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+@media (min-width: 861px) {
+  .site-nav { order: 1; }
+  .lang-switch { order: 2; }
+}
 
 @media (max-width: 860px) {
   .nav-toggle { display: flex; }
@@ -235,7 +270,7 @@ p { margin: 0; }
 /* ============================================================
    Sections / color blocks
    ============================================================ */
-.section { padding: clamp(3rem, 7vw, 5.5rem) 0; position: relative; overflow: hidden; }
+.section { padding: clamp(3rem, 7vw, 5.5rem) 0; position: relative; overflow: hidden; background: var(--bg); }
 .section--muted { background: var(--muted); }
 .section--navy { background: var(--navy); color: #fff; }
 .section--ocean { background: var(--primary); color: #fff; }

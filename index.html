@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lautbox Malaysia — Fresh Seafood From Sea To You</title>
-  <meta name="description" content="Lautbox Malaysia delivers fresh frozen & live seafood from sea to you. Order premium fish, prawns, crab, lobster and more via WhatsApp." />
+  <title>Lautbox Malaysia | Fresh Seafood From Sea To You</title>
+  <meta name="description" content="Lautbox Malaysia delivers fresh frozen and live seafood from sea to you. Order premium fish, prawns, crab, lobster and more via WhatsApp." />
 
-  <meta property="og:title" content="Lautbox Malaysia — Fresh Seafood From Sea To You" />
+  <meta property="og:title" content="Lautbox Malaysia | Fresh Seafood From Sea To You" />
   <meta property="og:description" content="Premium frozen & live seafood delivered across Malaysia. Order via WhatsApp." />
   <meta property="og:image" content="assets/images/logo.jpg" />
   <meta property="og:type" content="website" />
@@ -34,20 +34,24 @@
         <span class="brand__name">Lautbox <span>Malaysia</span></span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
+      <div class="header-right">
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language"><!-- buttons injected by app.js --></div>
 
-      <nav class="site-nav" id="primaryNav" aria-label="Primary">
-        <a href="#/" data-link>Home</a>
-        <a href="#/shop" data-link>Shop</a>
-        <a href="#/merchants" data-link>Merchants</a>
-        <a href="#/about" data-link>About</a>
-        <a href="#/contact" data-link>Contact</a>
-        <a class="btn btn--primary btn--sm" id="navWhatsApp" href="#" data-wa-general>Order Now</a>
-      </nav>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="site-nav" id="primaryNav" aria-label="Primary">
+          <a href="#/" data-link data-i18n="nav.home">Home</a>
+          <a href="#/shop" data-link data-i18n="nav.shop">Shop</a>
+          <a href="#/merchants" data-link data-i18n="nav.merchants">Outlets</a>
+          <a href="#/about" data-link data-i18n="nav.about">About</a>
+          <a href="#/contact" data-link data-i18n="nav.contact">Contact</a>
+          <a class="btn btn--primary btn--sm" id="navWhatsApp" href="#" data-wa-general data-i18n="nav.order">Order Now</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -63,32 +67,33 @@
         <img src="assets/images/logo.jpg" alt="" width="56" height="56" />
         <div>
           <p class="site-footer__name">Lautbox Malaysia</p>
-          <p class="site-footer__tag">Fresh Seafood From Sea To You</p>
+          <p class="site-footer__tag" data-i18n="footer.tagline">Fresh Seafood From Sea To You</p>
         </div>
       </div>
 
       <nav class="site-footer__nav" aria-label="Footer">
-        <a href="#/" data-link>Home</a>
-        <a href="#/shop" data-link>Shop</a>
-        <a href="#/merchants" data-link>Merchants</a>
-        <a href="#/about" data-link>About</a>
-        <a href="#/contact" data-link>Contact</a>
+        <a href="#/" data-link data-i18n="nav.home">Home</a>
+        <a href="#/shop" data-link data-i18n="nav.shop">Shop</a>
+        <a href="#/merchants" data-link data-i18n="nav.merchants">Outlets</a>
+        <a href="#/about" data-link data-i18n="nav.about">About</a>
+        <a href="#/contact" data-link data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="site-footer__contact">
-        <a id="footerWhatsApp" href="#" data-wa-general class="site-footer__wa">Order on WhatsApp</a>
-        <p>Mon – Sun · 9am – 9pm</p>
-        <p>Serving all of Malaysia 🇲🇾</p>
+        <a id="footerWhatsApp" href="#" data-wa-general class="site-footer__wa" data-i18n="footer.order">Order on WhatsApp</a>
+        <p data-i18n="footer.hours">Open daily, 9am to 9pm</p>
+        <p data-i18n="footer.area">We deliver across Malaysia 🇲🇾</p>
       </div>
     </div>
     <div class="site-footer__bar">
       <div class="container">
-        <p>© <span id="year"></span> Lautbox Malaysia. All rights reserved.</p>
+        <p>© <span id="year"></span> Lautbox Malaysia. <span data-i18n="footer.rights">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
 
   <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
